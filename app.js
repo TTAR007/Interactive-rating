@@ -25,7 +25,7 @@ const resultText = document.getElementById("result");
 submitBtn.addEventListener("click", () => {
     // get a rating that user have selected
     // if a rating button has "style" attribute, it means it has been selected.
-    let selectedRate = 0;
+    let selectedRate;
     for (const rating of ratingBtns) {
         if (rating.hasAttribute("style")) {
             selectedRate = rating.textContent;
@@ -33,7 +33,7 @@ submitBtn.addEventListener("click", () => {
         }
     }
 
-    if (selectedRate === 0) {
+    if (!selectedRate) {
         alert("Please select one");
     } else {
         // change text to thank you
