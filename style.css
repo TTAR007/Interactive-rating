@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Luckiest+Guy&family=M+PLUS+Rounded+1c&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-900: hsl(213, 19%, 18%);
+    --Grey-950: hsl(216, 12%, 8%);
+
+    --w400: 400;
+    --w700: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    min-height: 100dvh;
+    min-width: 320px;
+    padding-block: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Grey-950);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    background-image:
+    linear-gradient(to top, hsl(216, 19%, 11%), var(--Grey-900));
+    width: 85%;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    max-width: 400px;
+}
+
+.star-icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: hsl(214, 14%, 22%);
+    margin-block-end: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star-icon-container img {
+    width: 17px;
+}
+
+.phone-img-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.result-text {
+    background-color: var(--Grey-900);
+    color: var(--Orange);
+    width: fit-content;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+}
+
+h1 {
+    color: var(--White);
+    font-size: 1.625rem;
+    font-weight: var(--w700);
+    margin-block-end: 1rem;
+}
+
+.description {
+    color: var(--Grey-500);
+    line-height: 160%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-block: 1.5rem;
+}
+
+.rating-container div {
+    background-color: var(--Grey-900);
+    color: var(--Grey-500);
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms;
+    cursor: pointer;
+}
+
+.rating-container div:hover {
+    background-color: var(--White);
+    color: var(--Grey-950);
+}
+
+.rating-container div p {
+    font-weight: var(--w700);
+}
+
+button {
+    border: none;
+    display: block;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: var(--w700);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--Orange);
+    width: 100%;
+    border-radius: 24px;
+    transition: background-color 150ms;
+}
+
+button:hover {
+    background-color: var(--White);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--Orange);
+}
+
+/*attribution*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.hide {
+    display: none;
+}
