@@ -2,15 +2,18 @@ const ratingBtns = document.querySelectorAll(".rating");
 
 for (const rating of ratingBtns) {
     rating.addEventListener("click", (eventObj) => {
-        // before click, remove style of another element that we have added first.
+        // before click, remove style and class of another element that we have added first.
         // loop through all elements, but removeAttribute() if specified attribute does not exist It will not generate an error
         ratingBtns.forEach((rating) => {
             rating.removeAttribute("style");
+            rating.classList.remove("selected");
         })
 
         // add style to rating button
         eventObj.currentTarget.style.color = "var(--Grey-950)";
         eventObj.currentTarget.style.backgroundColor = "var(--Orange)";
+        // use "selected" class to track
+        eventObj.currentTarget.classList.add("selected");
     })
 }
 
@@ -24,10 +27,10 @@ const resultText = document.getElementById("result");
 
 submitBtn.addEventListener("click", () => {
     // get a rating that user have selected
-    // if a rating button has "style" attribute, it means it has been selected.
+    // if a rating button has "selected" class, it means it has been selected.
     let selectedRate;
     for (const rating of ratingBtns) {
-        if (rating.hasAttribute("style")) {
+        if (rating.classList.contains("selected")) {
             selectedRate = rating.textContent;
             break;
         }
