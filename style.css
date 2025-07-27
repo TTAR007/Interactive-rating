@@ -26,6 +26,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--Grey-950);
+    position: relative;
 }
 
 img {
@@ -143,7 +144,10 @@ button:active {
 }
 
 /*attribution*/
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; color: white; 
+    position: absolute;
+    bottom: 16px;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 .hide {
