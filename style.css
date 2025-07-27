@@ -36,10 +36,10 @@ img {
 
 main {
     background-image:
-    linear-gradient(to top, hsl(216, 19%, 11%), var(--Grey-900));
+    linear-gradient(to top, hsl(213, 14%, 12%), var(--Grey-900));
     width: 85%;
     padding: 2rem 1.5rem;
-    border-radius: 16px;
+    border-radius: 32px;
     max-width: 400px;
 }
 
